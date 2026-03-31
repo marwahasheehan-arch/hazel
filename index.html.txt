@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Hazel 🌸</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', cursive;
+      background: linear-gradient(to bottom, #ffe6f0, #fff);
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      padding: 50px;
+      color: #444;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #d63384;
+    }
+
+    p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: 20px auto;
+      line-height: 1.6;
+    }
+
+    .heart {
+      font-size: 2em;
+      color: red;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    /* Flower animation */
+    .flower {
+      position: absolute;
+      top: -50px;
+      font-size: 24px;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Hazel 🌸</h1>
+
+  <p>
+    I’ve been thinking about earlier, and I feel really guilty for leaving the call.
+    I thought I was giving you space, but I realize now that you might’ve needed me there.
+  </p>
+
+  <p>
+    I care about you so much, and it hurts knowing I wasn’t there when you were struggling.
+    You don’t have to go through things alone—not when I’m here.
+  </p>
+
+  <p>
+    I’m really sorry, Hazel. I truly am.  
+    If you need me, I’m here… to listen, to stay, or just to sit with you.
+  </p>
+
+  <div class="heart">❤️</div>
+</div>
+
+<script>
+  function createFlower() {
+    const flower = document.createElement('div');
+    flower.classList.add('flower');
+    flower.innerHTML = '🌸';
+
+    flower.style.left = Math.random() * 100 + 'vw';
+    flower.style.animationDuration = (3 + Math.random() * 5) + 's';
+
+    document.body.appendChild(flower);
+
+    setTimeout(() => {
+      flower.remove();
+    }, 8000);
+  }
+
+  setInterval(createFlower, 300);
+</script>
+
+</body>
+</html>
